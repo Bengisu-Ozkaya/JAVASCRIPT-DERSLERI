@@ -1,0 +1,36 @@
+# Fonkdsiyonları Dizi olarak tanımlayabilirim
+var functList = [
+    funct1() {debug("function 1 is working")},
+    funct2() {debug("function2 is working")},
+    funct3() {debug("function3 is working")},
+    funct4() {debug("function4 is working")},
+    funct5() {debug("function5 is working")}]
+
+functList[0]() -> function 1 is working
+functList[3]() -> function 4 is working
+
+# Dizilerde fonsksiyonlar
+pop() -> dizideki son elemanı çıkarır
+shift() -> diziyi sola kaydırır
+push() -> diziye eleman ekleme
+concat() -> dizi birleştirme
+sort() -> sıralama
+length -> dizinin uzunluğu
+
+# Class mantığı gibi
+var user{
+    name: "bengi"
+    lastname: "ozkaya"
+    age: 20
+    friends: [Gülso, elif, Diloş] // nesne içerisinde dizi de tutulabiliyor
+    greeting: function() {console.log("Selam!")}
+}
+
+user.name -> bengi
+user.lastname -> ozkaya
+user.age -> 20
+user.friends -> [Gülso, elif, Diloş] 
+user.greeting -> Selam!
+
+user.name = "Bengisu"
+user.name -> Bengisu

@@ -15,15 +15,21 @@ var posts = [
 var email = prompt("Email ?")
 var password = prompt("Password ?")
 
+function isUser(email,password){
+    for(i=0;i<users.length;i++){
+        if(users[i].email == email && users[i].password){
+            return true
+        }
+        return false
+    }
+}
+
+
 function logIn(email, password){
-    if(email == users[0].email && password == users[0].password 
-        || email == users[1].email && password == users[1].password
-        || email == users[2].email && password == users[2].password
-        || email == users[3].email && password == users[3].password
-    ){
+    if(isUser(email,password)){
         console.log(posts)
-    } else {
-        console.log("Giriş bilgilerinde hata var")
+    } else{
+        console.log("Bilgilerinizi doğru giriniz!")
     }
 }
 

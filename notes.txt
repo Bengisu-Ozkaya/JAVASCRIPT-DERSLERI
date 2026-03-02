@@ -34,3 +34,71 @@ user.greeting -> Selam!
 
 user.name = "Bengisu"
 user.name -> Bengisu
+
+# var - let farkı
+var city = "sivas"
+var city = "ankara"
+--> Bu işlem sorun çıkarmaz
+
+let city = "sivas"
+let city = "ankara"
+-->Bu işlem sorun çıkarır
+
+for(var i=0;i<=10;i++){
+    ...
+}
+console.Log(i) ---> Bu işlemde i'ye sorunsuz ulaşabilirim
+               ---> Eğer ulaşamamak istesem "let" keywordunu kullanmam gerek
+
+# const -> Sabit değer
+const pi = 3.14
+pi = 4 -> burası hata verecektir
+
+# Fonksiyonlarda bazı çılgınlıklar
+var funct1 = function fun1(){console.Log("function 1")}
+// fun1() fonksiyonunu direkt olarak çağıramam
+funct1() --> function 1
+
+const funct2 = () => {console.Log("function 2")}
+// buradaki "()" işareti bir fonksiyonu belirtiyor "=>" işareti de lambda gösterimi tarzı bir şey
+funct2() --> function 2
+
+# map işlemi
+var list = [1,2,3,4,5]
+
+var squareMap = list.map(number => {
+    number*number
+})
+console.Log(squareMap) --> 1,3,9,16,25
+
+// bu işlemi aşağıdaki yolla da yapabilriz
+var squareList = []
+list.forEach(number => squareList.push(number*number))
+console.Log(squareList) --> 1,3,9,16,25
+
+# filter -> dizideki elemanlara filtreleme yapabilmeyi sağlıyor
+var list = [2,5,21,14,32]
+const filterList = list.filter(number => number>4) 
+console.Log(filterList) --> [5,21,14,32]
+
+# reduce -> kümülatif toplama
+var list = [1,2,3]
+const sum = list.reduce(acc,number) => {
+    return acc + number 
+}
+console.Log(toplam) --> 6
+
+//acc'nin default değeri 0 
+//return acc + number
+/*
+    1.ADIM: 0+1 = 1 = acc
+    2.ADIM: 1+2 = 3 = acc
+    3.ADIM: 3+3 = 6 = acc
+*/
+
+# Expert seviye nesneler
+const product{
+    add : () => { console.Log(this)}
+}
+product.add() --> Buradaki çıktı product'ı göstermek yerine add() gösterecek
+              --> Yani burada this, içinde bulunduğu fonksiyonu vurgular (add())

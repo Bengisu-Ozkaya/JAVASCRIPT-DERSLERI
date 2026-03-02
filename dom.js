@@ -23,7 +23,7 @@ for(i=0;i<benefitList.length;i++){
 alert(classElements[1].innerHTML)
 
 //querySelectorAll
-var queryElement = document.querySelectorAll("p.par1") // p'lerden par1 classını kullananları çek
+var queryElement = document.querySelectorAll("p.par1") // p'lerden par1 classını kullanan her şeyi çek
 alert(queryElement.length)                             // getElementByClassName ile yapsaydık par1 classını kullanan bütün elemanları kapsamış olacaktık
 
 //getElementsByName
@@ -68,5 +68,4 @@ div.removeChild(p)
 var prod = document.getElementById("product")
 alert("Product Değişiyor")
 div.replaceChild(heading,prod)
-
 
